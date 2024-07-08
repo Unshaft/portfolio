@@ -1,0 +1,179 @@
+/* styles.css */
+
+/* Polices */
+body {
+    font-family: "Titillium Web", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FDFFFC; /* Baby powder */
+    color: #011627; /* Rich black */
+}
+
+header {
+    background-color: #011627; /* Rich black */
+    color: #FDFFFC; /* Baby powder */
+    text-align: center;
+    padding: 1em 0;
+    transition: background-color 0.3s ease-in-out; /* Transition for background color */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #011627; /* Rich black */
+    margin: 0;
+    transition: background-color 0.3s ease-in-out; /* Transition for background color */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #FDFFFC; /* Baby powder */
+    text-decoration: none;
+    padding: 15px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for background and text color */
+}
+
+nav ul li a:hover {
+    background-color: #2EC4B6; /* Light sea green */
+    color: #011627; /* Rich black */
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FDFFFC; /* Baby powder */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+h2 {
+    color: #2EC4B6; /* Light sea green */
+    font-weight: 700; /* Bold weight for headings */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+iframe {
+    border: none;
+}
+
+footer {
+    display: none;
+    background-color: rgba(1, 22, 39, 0.9); /* Rich black with transparency */
+    color: #FDFFFC; /* Baby powder */
+    text-align: center;
+    padding: 0.5em 0; /* Smaller padding */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.8em; /* Smaller font size */
+}
+
+.footer-content {
+    margin-bottom: 5px;
+}
+
+.footer-content a {
+    color: #FDFFFC; /* Baby powder */
+    margin: 0 10px;
+    font-size: 1.2em; /* Smaller icon size */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transition for color */
+}
+
+.footer-content a:hover {
+    color: #2EC4B6; /* Light sea green */
+}
+
+.footer-credits {
+    font-size: 0.7em; /* Smaller font size */
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    background-color: #2EC4B6; /* Light sea green */
+    padding: 20px;
+    border-radius: 5px;
+    color: #FDFFFC; /* Baby powder */
+}
+
+.intro-photo {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 3px solid #FDFFFC; /* Baby powder */
+    transition: transform 0.3s ease; /* Transition for transform */
+}
+
+.intro-container p {
+    margin: 0;
+    color: #FDFFFC; /* Baby powder */
+}
+
+.intro-photo:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Boutons interactifs */
+button, .btn {
+    background-color: #2EC4B6; /* Light sea green */
+    color: #FDFFFC; /* Baby powder */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for background color and transform */
+}
+
+button:hover, .btn:hover {
+    background-color: #011627; /* Rich black */
+    transform: scale(1.05); /* Slightly increase the size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-photo {
+        margin-bottom: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+}

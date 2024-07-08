@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Killian PERZO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-user"></i> Portfolio - Killian PERZO</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction"><i class="fas fa-home"></i> Introduction</a></li>
+            <li><a href="#projet1"><i class="fas fa-chart-line"></i> Projet 1: Tableau de bord R Shiny</a></li>
+            <li><a href="#projet2"><i class="fas fa-cogs"></i> Projet 2: Optimisation de la Maintenance des Véhicules de Transport Collectif</a></li>
+            <li><a href="#cv"><i class="fas fa-file-alt"></i> CV</a></li>
+        </ul>
+    </nav>
+    <section id="introduction">
+        <h2><i class="fas fa-home"></i> Introduction</h2>
+        <div class="intro-container">
+            <img src="images/Photo_1.jpg" alt="Photo de Killian" class="intro-photo">
+            <p>Bonjour ! Je m'appelle Killian, j'ai 24 ans et je viens de terminer mon BUT en Sciences des Données à Vannes. Passionné par la data science et le développement web, j'ai eu l'occasion de travailler sur divers projets stimulants au cours de mes études. Voici quelques-unes de mes réalisations dont je suis particulièrement fier. Explorez mon portfolio pour découvrir mon parcours et mes compétences en action.</p>
+        </div>
+    </section>
+    <section id="projet1">
+        <h2><i class="fas fa-chart-line"></i> Projet 1: Tableau de bord R Shiny</h2>
+        <h3><i class="fas fa-info-circle"></i> Contexte du projet :</h3>
+        <p>L'objectif de ce projet était de créer une application web interactive pour suivre et analyser les données géographiques des infrastructures sportives en France. Les données proviennent du site officiel de l'État et comprennent des informations détaillées sur chaque infrastructure, telles que les coordonnées géographiques, l'année de construction, le public cible, la disponibilité d'un site internet et l'accessibilité pour les personnes à mobilité réduite.</p>
+        <h3><i class="fas fa-bullseye"></i> Objectif principal :</h3>
+        <p>Faciliter l'accès et la visualisation des données des infrastructures sportives pour les utilisateurs, permettant des analyses spécifiques et une meilleure compréhension de la répartition et des caractéristiques des infrastructures sportives en France.</p>
+        
+        <h3><i class="fas fa-tasks"></i> Fonctionnalités principales :</h3>
+        <ul>
+            <li><strong>Sélection de la ville :</strong> Les utilisateurs peuvent choisir une ville en France pour afficher les infrastructures sportives disponibles. Les villes sont sélectionnées dynamiquement en fonction de la région et du département choisis.</li>
+            <li><strong>Filtres avancés :</strong> 
+                <ul>
+                    <li><strong>Année de construction :</strong> Permet de filtrer les infrastructures en fonction de leur année de construction.</li>
+                    <li><strong>Public cible :</strong> Filtre les infrastructures par public cible (jeunes, adultes, seniors).</li>
+                    <li><strong>Accessibilité :</strong> Filtre les infrastructures accessibles aux personnes à mobilité réduite.</li>
+                    <li><strong>Type de propriétaire :</strong> Filtre par type de propriétaire (commune, département, région, etc.).</li>
+                    <li><strong>Type de sol :</strong> Filtre par type de surface de sol (bitume, gazon naturel, synthétique, etc.).</li>
+                    <li><strong>Nature de l'équipement :</strong> Filtre par nature de l'équipement (intérieur, extérieur, site naturel, etc.).</li>
+                </ul>
+            </li>
+            <li><strong>Visualisation des données :</strong>
+                <ul>
+                    <li><strong>Carte interactive Leaflet :</strong> Affiche les infrastructures sportives sous forme de marqueurs géolocalisés. Les utilisateurs peuvent cliquer sur les marqueurs pour obtenir des informations détaillées.</li>
+                    <li><strong>Carte choroplèthe :</strong> Affiche une carte colorée représentant la densité des infrastructures par région, département ou commune.</li>
+                    <li><strong>Tableau des données :</strong> Affiche les infrastructures dans un tableau interactif avec des options de recherche et de filtrage.</li>
+                    <li><strong>Graphiques dynamiques avec Plotly :</strong>
+                        <ul>
+                            <li>Histogramme des types d'équipements.</li>
+                            <li>Répartition des équipements par type de propriétaire.</li>
+                            <li>Accessibilité des infrastructures.</li>
+                            <li>Répartition des équipements par type de sol.</li>
+                            <li>Nombre d'équipements par nature de site.</li>
+                            <li>Nombre d'équipements par type d'utilisateur.</li>
+                            <li>Évolution du nombre d'installations au fil des années.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3><i class="fas fa-cogs"></i> Déroulement du projet :</h3>
+        <p><strong>Collecte des données :</strong> Importation des données des infrastructures sportives à partir du site officiel de l'État via une API REST. Utilisation de <code>httr</code> et <code>jsonlite</code> pour gérer les requêtes API et le traitement des réponses JSON.</p>
+        <p><strong>Prétraitement des données :</strong> Nettoyage et formatage des données pour garantir leur qualité et leur compatibilité avec l'application Shiny. Sélection des colonnes pertinentes et gestion des valeurs manquantes.</p>
+        <p><strong>Développement de l'application :</strong> Utilisation de <code>R Shiny</code> pour le développement de l'application web. Intégration de la bibliothèque <code>Leaflet</code> pour la visualisation des cartes. Utilisation de <code>Plotly</code> pour la création de graphiques interactifs. Utilisation de <code>DT</code> pour les tableaux interactifs. Application de styles personnalisés pour améliorer l'esthétique de l'application.</p>
+        
+        <h3><i class="fas fa-wrench"></i> Fonctionnalités techniques détaillées :</h3>
+        <p><strong>Interface utilisateur (UI) :</strong> Utilisation de <code>shinydashboard</code> pour structurer l'interface utilisateur avec des onglets pour l'introduction, le tableau, les graphiques et la carte. Inclusion de filtres interactifs pour affiner la recherche des infrastructures.</p>
+        <p><strong>Serveur (Server) :</strong> Gestion des requêtes API pour récupérer les données des infrastructures sportives. Traitement des données récupérées pour les afficher dans les différents composants de l'interface utilisateur. Application des filtres sélectionnés par l'utilisateur pour mettre à jour dynamiquement les visualisations et les tableaux. Génération de rapports téléchargeables au format PDF avec <code>rmarkdown</code>.</p>
+        <p><strong>Visualisation des données :</strong> 
+            <ul>
+                <li><strong>Carte interactive Leaflet :</strong> Affichage des infrastructures sportives sous forme de marqueurs géolocalisés. Utilisation de clusters de marqueurs pour une meilleure visualisation des points de données. Ajout de couches de carte différentes (Default, Light, Satellite).</li>
+                <li><strong>Carte choroplèthe :</strong> Génération de cartes choroplèthes pour représenter la densité des infrastructures par région, département ou commune. Utilisation de palettes de couleurs pour indiquer la densité des infrastructures.</li>
+                <li><strong>Graphiques Plotly :</strong> Création de graphiques interactifs pour afficher les données agrégées par type d'équipement, type de propriétaire, accessibilité, type de sol, nature de l'équipement, type d'utilisateur et année de création.</li>
+            </ul>
+        </p>
+        <p><strong>Téléchargement des données :</strong> Option de téléchargement des données filtrées sous forme de fichier JSON. Génération de rapports PDF téléchargeables avec des graphiques et des statistiques résumant les données sélectionnées.</p>
+        
+        <h3><i class="fas fa-map-marker-alt"></i> Illustration de la carte :</h3>
+        <img src="images/Screen_1.png" alt="Carte des infrastructures sportives">
+        
+        <h3><i class="fas fa-flag-checkered"></i> Conclusion :</h3>
+        <p>Ce projet de tableau de bord R Shiny pour la visualisation des infrastructures sportives en France démontre la capacité à intégrer et à manipuler des données géographiques complexes. L'application offre une interface utilisateur intuitive permettant aux utilisateurs de filtrer et d'explorer les données de manière interactive. Les visualisations dynamiques et les rapports téléchargeables fournissent des outils puissants pour l'analyse et la prise de décision.</p>
+        
+        <h3><i class="fas fa-code-branch"></i> Accès au code source :</h3>
+        <p>Pour voir le code source, visitez mon dépôt GitHub : <a href="https://github.com/Unshaft/MaintCar" target="_blank">GitHub</a>.</p>
+    </section>
+    <section id="projet2">
+        <h2><i class="fas fa-cogs"></i> Projet 2: Optimisation de la Maintenance des Véhicules de Transport Collectif</h2>
+        <p><strong><i class="fas fa-info-circle"></i> Contexte et Objectifs :</strong></p>
+        <p><strong>Contexte :</strong></p>
+        <p>Dans le cadre de l'amélioration des opérations de maintenance de ses véhicules, une entreprise de transport collectif souhaite développer des recommandations assistées pour ses techniciens de maintenance. L'objectif est de mutualiser l'expertise des techniciens répartis sur différents sites géographiques et intervenant sur des équipements similaires.</p>
+        <p><strong>Objectifs :</strong></p>
+        <p>Le projet vise à créer des outils d'aide à la décision pour piloter la maintenance et réaliser les actions de réparation en utilisant des données issues de la GMAO (Gestion de Maintenance Assistée par Ordinateur). Les données sont anonymisées et confidentielles, et leur partage est strictement limité au cadre du projet.</p>
+        <p><strong><i class="fas fa-wrench"></i> Contributions Techniques :</strong></p>
+        <p><strong>Prétraitement des données :</strong></p>
+        <ul>
+            <li>Chargement et fusion de différentes sources de données.</li>
+            <li>Transformation des colonnes catégorielles et imputation des valeurs manquantes.</li>
+        </ul>
+        <p><strong>Modélisation :</strong></p>
+        <ul>
+            <li>Utilisation de <code>DecisionTreeClassifier</code> pour prédire les types de systèmes et les ordres de travail.</li>
+            <li>Évaluation des modèles de prédiction avec des métriques de précision.</li>
+        </ul>
+        <p><strong>Interface Utilisateur avec Dash :</strong></p>
+        <ul>
+            <li>Développement d'une interface interactive permettant de sélectionner les modalités et de visualiser les prédictions.</li>
+            <li>Intégration de graphiques interactifs pour afficher les résultats des modèles de prédiction.</li>
+        </ul>
+        <p><strong><i class="fas fa-tools"></i> Technologies Utilisées :</strong></p>
+        <ul>
+            <li><strong>Python :</strong> Pandas, Scikit-learn pour le traitement des données et la modélisation.</li>
+            <li><strong>Dash :</strong> Développement de l'interface utilisateur.</li>
+            <li><strong>Plotly :</strong> Visualisation des données.</li>
+            <li><strong>CSS :</strong> Personnalisation de l'apparence de l'application.</li>
+        </ul>
+        <p><strong><i class="fas fa-trophy"></i> Résultats :</strong></p>
+        <p>Le projet a permis de :</p>
+        <ul>
+            <li>Centraliser et exploiter les données de maintenance.</li>
+            <li>Améliorer les recommandations pour les techniciens de maintenance.</li>
+            <li>Développer une interface utilisateur intuitive pour faciliter l'accès aux prédictions des modèles.</li>
+        </ul>
+        <p><strong><i class="fas fa-flag-checkered"></i> Conclusion :</strong></p>
+        <p>Ce projet illustre l'application de techniques de data science et de développement d'interfaces utilisateur pour optimiser les opérations de maintenance dans le secteur des transports collectifs. Il démontre la capacité à transformer des données complexes en outils pratiques et accessibles pour les techniciens sur le terrain.</p>
+        <p>Pour voir le code source, visitez mon dépôt GitHub : <a href="https://github.com/Unshaft/MaintCar" target="_blank">GitHub</a>.</p>
+    </section>
+    <section id="cv">
+        <h2><i class="fas fa-file-alt"></i> Mon CV</h2>
+        <iframe src="documents/CV.pdf" width="100%" height="600px">
+            Ce navigateur ne supporte pas les fichiers PDF. Vous pouvez télécharger le fichier en cliquant <a href="documents/CV.pdf">ici</a>.
+        </iframe>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <a href="https://www.instagram.com/killianozrep/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://fr.linkedin.com/in/killian-perzo-24085417a?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-credits">
+            <p>&copy; 2024 Killian PERZO. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector('footer');
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                footer.style.display = 'block';
+            } else {
+                footer.style.display = 'none';
+            }
+        });
+    </script>
+    
+</body>
+</html>
